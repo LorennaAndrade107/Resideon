@@ -66,4 +66,4 @@ Em desenvolvimento.
 
 ## Autoria
 
-Feito por Lore do Gera.
+Feito por Lorenna Andrade.
