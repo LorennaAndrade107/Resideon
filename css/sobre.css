@@ -1,0 +1,183 @@
+/* variaveis das cores que eu vou usar */
+:root {
+    --fundo-escuro: #0f1724;
+    --fundo-claro: #f4f7fa;
+    --destaque: #2ec4b6;
+    --texto-claro: #e8edf3;
+    --texto-escuro: #1c2733;
+    --fonte-titulo: "Orbitron", sans-serif;
+    --fonte-texto: "Montserrat", sans-serif;
+}
+
+/*Base  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--texto-escuro);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cor diferente só no "On" do logo (topo e rodapé) */
+.logo span,
+.rodape-logo span {
+    color: var(--destaque);
+}
+
+/* TOPO */
+.topo {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    padding: 24px 8% 90px 8%;
+}
+
+/* Menu: logo à esquerda, links à direita */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 24px;
+    color: var(--texto-claro);
+}
+
+.menu ul {
+    display: flex;
+    gap: 32px;
+}
+
+.menu ul a {
+    color: var(--texto-claro);
+    font-weight: 600;
+}
+
+.menu ul a:hover {
+    color: var(--destaque);
+}
+
+.topo-texto h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.topo-texto p {
+    font-size: 20px;
+    max-width: 520px;
+}
+
+/* SEÇÕES */
+.secao {
+    padding: 80px 8%;
+}
+
+.secao-clara {
+    background-color: var(--fundo-claro);
+    color: var(--texto-escuro);
+}
+
+.secao-escura {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+}
+
+/* Limita a largura do texto para facilitar a leitura */
+.coluna-texto {
+    max-width: 640px;
+}
+
+.secao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.secao p {
+    margin-bottom: 18px;
+}
+
+/* Frase em destaque da seção "Nosso objetivo" */
+.destaque {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--destaque);
+}
+
+.titulo-centro {
+    text-align: center;
+}
+
+/*BLOCOS (o que você encontra) */
+.blocos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.bloco {
+    background-color: #ffffff;
+    border-left: 4px solid var(--destaque);
+    padding: 24px;
+}
+
+.bloco h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.bloco p {
+    margin-bottom: 0;
+}
+
+/* BOTÃO  */
+.botao {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--destaque);
+    color: var(--fundo-escuro);
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 6px;
+}
+
+.botao:hover {
+    background-color: var(--fundo-escuro);
+    color: var(--destaque);
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 40px 8%;
+}
+
+.rodape-logo {
+    font-family: var(--fonte-titulo);
+    font-size: 22px;
+    margin-bottom: 8px;
+}

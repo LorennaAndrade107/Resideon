@@ -1,0 +1,93 @@
+/*Está representando o contêiner que agrupar as questoes*/
+.lista-questoes {
+  max-width: 800px;
+}
+/*Cada cartão individual*/
+.questao {
+  margin-bottom: 20px;
+}
+
+/*esconde as bolinhas dos botões radio*/
+.questao input {
+  display: none;
+}
+
+/*seleciona os elementos label que possuem 
+a classe opcao e estão dentro de um elemento 
+com a classe questao.  */
+.questao label.opcao {
+  display: block;
+  /*cada alternativa ocupe uma linha inteira disponível 
+  e fica uma abaixo da outra*/
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.questao label.opcao:hover {
+  border-color: var(--verde);
+}
+
+/*inputs que possuem a classe certa e estão dentro de uma questão
+ai o checked verifica se o input está selecionado e o +
+vai seleciona o elemento que aparece imediatamente depois do elemento anterior*/
+.questao input.certa:checked + label {
+  background: #e6f7ec;
+  border-color: #2e9e5b;
+}
+
+.questao input.errada:checked + label {
+  background: #fdeaea;
+  border-color: #d64545;
+}
+
+/*mensagem que aparece depois da resposta*/
+.feedback {
+  /*Esconde as mensagens inicialmente.*/
+  display: none;
+  /*cima, direita, baixo e esquerda*/
+  margin: 14px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/*Cor da mensagem de acerto*/
+.acerto {
+  color: #2e9e5b;
+}
+
+/*Cor da mensagem de erro*/
+.erro {
+  color: #d64545;
+}
+
+/* mostra "correta" quando marcar uma certa */
+.questao input.certa:checked ~ .acerto {
+  display: block;
+}
+
+/* mostra "incorreta" quando marcar uma errada */
+.questao input.errada:checked ~ .erro {
+  display: block;
+}
+
+/* EXPLICAÇÃO (aparece depois de responder) */
+.explicacao {
+  display: none;
+  margin: 12px 0 0 0;
+  padding: 12px 14px;
+  background: var(--fundo);
+  border-left: 4px solid var(--verde);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/*Cor da mensagem de erro*/
+.questao input:checked ~ .explicacao {
+  display: block;
+}

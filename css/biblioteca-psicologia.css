@@ -1,0 +1,345 @@
+/*variáveis das cores que estou usando no site */
+:root {
+  --verde-escuro: #0d3b2e;
+  --menu-fundo: #0b2f25;
+  --menu-ativo: #1b4a3c;
+  --verde: #1f9d78;
+  --verde-claro: #d9f3ea;
+  --verde-neon: #2ecc9a;
+  --fundo: #f0f2f5;
+  --branco: #ffffff;
+  --texto: #1f2933;
+  --texto-suave: #6b7785;
+  --borda: #e3e7ec;
+}
+
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+}
+
+/* MENU LATERAL */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 100vh;
+  background: var(--menu-fundo);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--branco);
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.logo span {
+  color: var(--verde-neon);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 14px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  color: #d5e5df;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-lateral a span {
+  display: inline-block;
+  width: 22px;
+  color: var(--verde-neon);
+}
+
+.menu-lateral a:hover {
+  background: var(--menu-ativo);
+}
+
+.menu-lateral a.ativo {
+  background: var(--menu-ativo);
+  color: var(--verde-neon);
+}
+
+.sidebar-final {
+  margin-top: auto;
+}
+
+.sidebar-final a {
+  color: #d5e5df;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+.principal {
+  margin-left: 210px;
+  padding: 20px;
+}
+
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 26px;
+  color: var(--verde-escuro);
+}
+
+.cabecalho p {
+  margin: 6px 0 0 0;
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+
+/*  SEÇÕES  */
+.secao {
+  margin-top: 30px;
+}
+
+.titulo-secao {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--verde-escuro);
+  border-left: 4px solid var(--verde-neon);
+  padding-left: 10px;
+}
+
+.intro {
+  margin: -6px 0 16px 0;
+  font-size: 12px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+/* CARDS EM 2 COLUNAS */
+.lista-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card-livro {
+  display: flex;
+  gap: 18px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card-livro:hover {
+  border-color: var(--verde-neon);
+}
+
+/* Capa do livro */
+.capa {
+  flex-shrink: 0;
+  width: 100px;
+  height: 140px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #1b4a3c, #0b2f25);
+  color: var(--verde-neon);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* NOVO: corta o que passar da borda arredondada */
+}
+
+/* NOVO: imagem dentro da capa */
+.capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche a capa sem esticar a imagem */
+  display: block;
+}
+
+/* NOVO: capa para logos (bases de dados e revistas) */
+.capa-logo {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  padding: 10px;
+}
+
+.capa-logo img {
+  object-fit: contain; /* mostra o logo inteiro, sem cortar */
+}
+
+.card-corpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-corpo h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: var(--verde-escuro);
+}
+
+.selo {
+  display: inline-block;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.descricao {
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  color: var(--texto-suave);
+  line-height: 1.5;
+}
+
+.rotulo {
+  margin: 12px 0 6px 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--verde);
+}
+
+/* Etiquetas (chips) */
+.chips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chips li {
+  display: inline-block;
+  background: var(--fundo);
+  color: var(--texto-suave);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 0 6px 6px 0;
+}
+
+/* Barra de relevância */
+.relevancia {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--borda);
+}
+
+.relevancia-texto {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--texto-suave);
+}
+
+.barra {
+  flex: 1;
+  height: 8px;
+  background: var(--borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-cheia {
+  height: 100%;
+  background: linear-gradient(90deg, var(--verde), var(--verde-neon));
+  border-radius: 10px;
+}
+
+/* Largura da barra conforme a nota (1 a 5) */
+.largura-1 { width: 20%; }
+.largura-2 { width: 40%; }
+.largura-3 { width: 60%; }
+.largura-4 { width: 80%; }
+.largura-5 { width: 100%; }
+
+.nota {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+/*TABELA DE ORDEM DE ESTUDO */
+.tabela {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: var(--branco);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+}
+
+.tabela th {
+  background: var(--menu-fundo);
+  color: var(--branco);
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 14px 18px;
+}
+
+.tabela td {
+  padding: 16px 18px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--borda);
+  color: var(--texto-suave);
+}
+
+.tabela tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela .periodo {
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* LINK VOLTAR */
+.voltar {
+  display: inline-block;
+  margin: 30px 0 20px 0;
+  color: var(--verde);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}

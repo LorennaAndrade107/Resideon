@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ResideOn | Áreas de aprendizagem</title>
+
+    <link rel="stylesheet" href="../css/primeirocard.css" />
+
+    <!-- O navegador começa a se conectar antecipadamente com os servidores das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Agrupa os elementos principais: menu lateral e conteúdo -->
+    <div class="layout">
+      <!-- aside é o conteúdo complementar da página. Aqui é o menu lateral -->
+      <aside class="sidebar">
+        <!-- LOGO -->
+        <a href="inicio.html" class="logo"> Reside<span>On</span> </a>
+
+        <!-- Agrupa os links do menu -->
+        <nav class="menu-lateral">
+          <!-- A classe "ativo" indica o item da página atual -->
+          <a href="primeirocard.html" class="ativo">
+            <span>⌂</span> Visão geral
+          </a>
+
+          <a href="mapa-corpo.html"> <span>✚</span> Mapa anatômico </a>
+
+          <a href="biblioteca-anestegiologia.html">
+            <span>▤</span> Biblioteca
+          </a>
+
+          <a href="casos-clinicos.html"> <span>▣</span> Casos clínicos </a>
+
+          <a href="questionarios.html"> <span>◷</span> Questionários </a>
+        </nav>
+
+        <!-- Link para voltar à página inicial -->
+        <div class="sidebar-final">
+          <a href="inicio.html">↪ Sair</a>
+        </div>
+      </aside>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="principal">
+        <section class="conteudo">
+          <!-- CABEÇALHO -->
+          <div class="cabecalho">
+            <h1>Áreas de aprendizagem</h1>
+            <p>Explore os conteúdos e recursos educacionais da plataforma.</p>
+          </div>
+
+          <!-- LISTA DE CONTEÚDOS -->
+          <div class="lista-conteudos">
+            <!-- ITEM 1: leva para o mapa do corpo humano -->
+            <div class="item">
+              <div class="item-icone">✚</div>
+
+              <div class="item-info">
+                <h3>Mapa interativo do corpo humano</h3>
+                <p>Consulta de regiões anatômicas e conteúdos educativos.</p>
+              </div>
+
+              <a href="mapa-corpo.html">Visualizar</a>
+            </div>
+
+            <!-- ITEM 2: leva para a biblioteca -->
+            <div class="item">
+              <div class="item-icone">▤</div>
+
+              <div class="item-info">
+                <h3>Biblioteca de Anestesiologia</h3>
+                <p>Técnicas anestésicas, indicações e precauções.</p>
+              </div>
+
+              <a href="biblioteca-anestegiologia.html">Visualizar</a>
+            </div>
+
+            <!-- ITEM 3: leva para os casos clínicos -->
+            <div class="item">
+              <div class="item-icone">▣</div>
+
+              <div class="item-info">
+                <h3>Casos clínicos interativos</h3>
+                <p>Situações simuladas para estimular o raciocínio clínico.</p>
+              </div>
+
+              <a href="casos-clinicos.html">Visualizar</a>
+            </div>
+
+            <!-- ITEM 4: leva para os questionários -->
+            <div class="item">
+              <div class="item-icone">?</div>
+
+              <div class="item-info">
+                <h3>Questionários e revisão</h3>
+                <p>Perguntas educativas e feedback das respostas.</p>
+              </div>
+
+              <a href="questionarios.html">Visualizar</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

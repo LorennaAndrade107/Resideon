@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ResideOn | Mapa interativo do corpo humano</title>
+
+    <!-- primeirocard.css traz o layout e o menu lateral; mapa-corpo.css traz o que é só desta página -->
+    <link rel="stylesheet" href="../css/primeirocard.css" />
+    <link rel="stylesheet" href="../css/mapa-corpo.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- MENU LATERAL -->
+      <!--O aside é o conteúdo complementar ou lateral-->
+      <aside class="sidebar">
+        <a href="inicio.html" class="logo"> Reside<span>On</span> </a>
+
+        <!--Estou agrupando os links-->
+        <nav class="menu-lateral">
+          <a href="primeirocard.html"> <span>⌂</span> Visão geral </a>
+
+          <a href="mapa-corpo.html" class="ativo">
+            <span>✚</span> Mapa anatômico
+          </a>
+
+          <a href="biblioteca-anestegiologia.html">
+            <span>▤</span> Biblioteca
+          </a>
+
+          <a href="casos-clinicos.html"> <span>▣</span> Casos clínicos </a>
+
+          <a href="questionarios.html"> <span>◷</span> Questionários </a>
+        </nav>
+
+        <div class="sidebar-final">
+          <a href="inicio.html">↪ Sair</a>
+        </div>
+      </aside>
+
+      <!-- ÁREA PRINCIPAL -->
+      <main class="principal">
+        <!--Seção temática do documento-->
+        <section class="conteudo">
+          <!-- CABEÇALHO -->
+          <div class="cabecalho">
+            <h1>Mapa interativo do corpo humano</h1>
+
+            <p>Selecione uma região do corpo para explorar.</p>
+          </div>
+
+          <!-- RÁDIOS ESCONDIDOS: o CSS usa o que está marcado para mostrar uma região
+          (precisam ficar ANTES dos cards e dos conteúdos) -->
+          <!--O Radio é um campo de seleção que permite escolher apenas uma opção dentro de um 
+          mesmo grupo quando eu seleciono uma a anterior não fica mais selecionada-->
+          <input
+            type="radio"
+            name="regiao"
+            id="r-cabeca"
+            class="regiao-radio"
+            checked
+          />
+          <input
+            type="radio"
+            name="regiao"
+            id="r-tronco"
+            class="regiao-radio"
+          />
+          <input
+            type="radio"
+            name="regiao"
+            id="r-bracos"
+            class="regiao-radio"
+          />
+          <input
+            type="radio"
+            name="regiao"
+            id="r-pernas"
+            class="regiao-radio"
+          />
+
+          <!-- CARDS PARA ESCOLHER A REGIÃO (cada label marca o rádio de mesmo id) -->
+          <div class="corpo-botoes">
+            <label class="regiao-btn" for="r-cabeca">
+              <span class="regiao-nome">Cabeça</span>
+              <span class="regiao-imagem">
+                <img src="../img/OIP.webp" alt="Cabeça" />
+              </span>
+            </label>
+
+            <label class="regiao-btn" for="r-tronco">
+              <span class="regiao-nome">Tronco</span>
+              <span class="regiao-imagem">
+                <img
+                  src="../img/skeleton-transparent-body-F.jpg"
+                  alt="Tronco"
+                />
+              </span>
+            </label>
+
+            <label class="regiao-btn" for="r-bracos">
+              <span class="regiao-nome">Braços</span>
+              <span class="regiao-imagem">
+                <img src="../img/OIP (1).webp" alt="Braços" />
+              </span>
+            </label>
+
+            <label class="regiao-btn" for="r-pernas">
+              <span class="regiao-nome">Pernas</span>
+              <span class="regiao-imagem">
+                <img src="../img/OIP (2).webp" alt="Pernas" />
+              </span>
+            </label>
+          </div>
+
+          <!--CONTEÚDO - CABEÇA-->
+          <div class="regiao-conteudo" id="conteudo-cabeca">
+            <!-- Introdução -->
+            <div class="conteudo-intro">
+              <span class="conteudo-tag">Região</span>
+              <h2>Cabeça e Anestesiologia</h2>
+              <p>
+                A cabeça abriga estruturas responsáveis pelas funções mais
+                importantes do organismo, como consciência, respiração,
+                percepção sensorial e controle dos movimentos. Na
+                anestesiologia, o conhecimento detalhado dessa região é
+                indispensável para garantir uma anestesia segura, monitorar as
+                funções neurológicas e realizar o manejo adequado das vias
+                aéreas.
+              </p>
+            </div>
+
+            <!-- Cards das estruturas -->
+            <div class="orgaos-grid">
+              <!-- CÉREBRO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Cérebro</h3>
+                <p>
+                  O cérebro é o principal órgão do sistema nervoso central e o
+                  alvo direto da anestesia geral. Os medicamentos anestésicos
+                  reduzem temporariamente a consciência, a percepção da dor e os
+                  reflexos, permitindo que procedimentos cirúrgicos sejam
+                  realizados com conforto e segurança.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Controle da consciência durante a cirurgia</li>
+                  <li>Monitorização da atividade neurológica</li>
+                  <li>Manutenção da oxigenação cerebral</li>
+                  <li>Prevenção de lesões neurológicas</li>
+                </ul>
+              </article>
+
+              <!-- CRÂNIO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Crânio</h3>
+                <p>
+                  O crânio protege o cérebro contra impactos e fornece
+                  sustentação para os músculos da face e estruturas sensoriais.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação de traumas cranianos</li>
+                  <li>Planejamento anestésico em cirurgias neurológicas</li>
+                  <li>Proteção das estruturas intracranianas</li>
+                </ul>
+              </article>
+
+              <!-- OLHOS -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Olhos</h3>
+                <p>
+                  São responsáveis pela visão e extremamente sensíveis durante
+                  procedimentos anestésicos.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Proteção da córnea durante a anestesia geral</li>
+                  <li>Prevenção de ressecamento ocular</li>
+                  <li>
+                    Monitorização do reflexo pupilar em determinadas cirurgias
+                  </li>
+                </ul>
+              </article>
+
+              <!-- OUVIDOS -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Ouvidos</h3>
+                <p>Responsáveis pela audição e pelo equilíbrio.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Posicionamento adequado da cabeça durante a cirurgia</li>
+                  <li>Cuidados especiais em cirurgias otológicas</li>
+                  <li>
+                    Avaliação de alterações neurológicas relacionadas ao
+                    equilíbrio
+                  </li>
+                </ul>
+              </article>
+
+              <!-- NARIZ -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Nariz</h3>
+                <p>
+                  Além de permitir a passagem do ar, filtra, aquece e umidifica
+                  o oxigênio inspirado.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação da permeabilidade das vias aéreas</li>
+                  <li>Intubação nasotraqueal em procedimentos específicos</li>
+                  <li>
+                    Administração de oxigênio e alguns medicamentos por via
+                    nasal
+                  </li>
+                </ul>
+              </article>
+
+              <!-- BOCA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Boca</h3>
+                <p>É a principal via de acesso para a intubação orotraqueal.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação da abertura bucal</li>
+                  <li>Verificação da dentição</li>
+                  <li>
+                    Identificação de possíveis dificuldades para intubação
+                  </li>
+                </ul>
+              </article>
+
+              <!-- LÍNGUA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Língua</h3>
+                <p>Auxilia na fala, mastigação e deglutição.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>
+                    Pode obstruir as vias aéreas durante a perda de consciência
+                  </li>
+                  <li>Sua posição é avaliada antes da intubação</li>
+                </ul>
+              </article>
+
+              <!-- DENTES -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Dentes</h3>
+                <p>
+                  Embora pareçam apenas estruturas de mastigação, são
+                  cuidadosamente avaliados antes da anestesia.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Identificação de dentes frágeis ou próteses</li>
+                  <li>Redução do risco de lesões durante a intubação</li>
+                </ul>
+              </article>
+
+              <!-- FARINGE E LARINGE -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Faringe e Laringe</h3>
+                <p>Conectam a boca e o nariz à traqueia.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Permitem a passagem do tubo de intubação</li>
+                  <li>Garantem uma ventilação segura durante o procedimento</li>
+                  <li>São essenciais para o controle das vias aéreas</li>
+                </ul>
+              </article>
+
+              <!-- TRAQUEIA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Traqueia</h3>
+                <p>Conduz o ar até os pulmões.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Local onde o tubo orotraqueal é posicionado</li>
+                  <li>
+                    Mantém a ventilação mecânica durante a anestesia geral
+                  </li>
+                </ul>
+              </article>
+
+              <!-- NERVOS CRANIANOS -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Nervos Cranianos</h3>
+                <p>
+                  São doze pares de nervos que controlam movimentos,
+                  sensibilidade da face, visão, audição, deglutição e fala.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação neurológica antes e após cirurgias</li>
+                  <li>Realização de bloqueios anestésicos da face</li>
+                  <li>Monitorização da integridade neurológica</li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- Destaque final -->
+            <div class="conteudo-final">
+              <h3>A importância da cabeça na anestesiologia</h3>
+              <p>
+                Grande parte da segurança anestésica depende da avaliação
+                cuidadosa das estruturas da cabeça e do pescoço. O
+                anestesiologista analisa as vias aéreas, protege o cérebro,
+                mantém a oxigenação adequada e garante que todas as funções
+                neurológicas permaneçam estáveis durante o procedimento
+                cirúrgico. Esse conhecimento permite antecipar dificuldades,
+                prevenir complicações e oferecer um cuidado preciso, seguro e
+                individualizado ao paciente.
+              </p>
+            </div>
+          </div>
+
+          <!--CONTEÚDO - TRONCO-->
+          <div class="regiao-conteudo" id="conteudo-tronco">
+            <!-- Introdução -->
+            <div class="conteudo-intro">
+              <span class="conteudo-tag">Região</span>
+              <h2>Tronco e Anestesiologia</h2>
+              <p>
+                O tronco é a região central do corpo humano e abriga os
+                principais órgãos responsáveis pela manutenção da vida. Nele
+                encontram-se estruturas essenciais dos sistemas cardiovascular,
+                respiratório, digestório e nervoso, além de músculos e vasos
+                sanguíneos fundamentais para o funcionamento do organismo.
+              </p>
+              <p>
+                Na anestesiologia, o conhecimento detalhado da anatomia do
+                tronco é indispensável para monitorar funções vitais,
+                administrar anestésicos, realizar bloqueios regionais e garantir
+                a segurança do paciente durante todo o procedimento cirúrgico.
+              </p>
+            </div>
+
+            <!-- Cards das estruturas -->
+            <div class="orgaos-grid">
+              <!-- CORAÇÃO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Coração</h3>
+                <p>
+                  O coração é responsável por bombear o sangue para todo o
+                  organismo, garantindo o transporte de oxigênio, nutrientes e
+                  medicamentos.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>
+                    Monitorização contínua da frequência e do ritmo cardíaco
+                  </li>
+                  <li>Controle da pressão arterial</li>
+                  <li>Avaliação da perfusão dos órgãos</li>
+                  <li>Identificação precoce de alterações cardiovasculares</li>
+                </ul>
+              </article>
+
+              <!-- PULMÕES -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Pulmões</h3>
+                <p>
+                  Os pulmões realizam as trocas gasosas, fornecendo oxigênio ao
+                  sangue e eliminando gás carbônico.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Controle da ventilação mecânica</li>
+                  <li>Monitorização da oxigenação</li>
+                  <li>Avaliação da função respiratória</li>
+                  <li>
+                    Prevenção de complicações pulmonares durante a cirurgia
+                  </li>
+                </ul>
+              </article>
+
+              <!-- TRAQUEIA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Traqueia</h3>
+                <p>
+                  A traqueia conduz o ar até os pulmões e representa uma das
+                  principais vias aéreas do organismo.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Intubação orotraqueal</li>
+                  <li>Ventilação segura do paciente</li>
+                  <li>Administração de oxigênio durante procedimentos</li>
+                </ul>
+              </article>
+
+              <!-- DIAFRAGMA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Diafragma</h3>
+                <p>É o principal músculo responsável pela respiração.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação da mecânica respiratória</li>
+                  <li>Controle da ventilação durante a anestesia geral</li>
+                  <li>
+                    Recuperação da respiração espontânea ao final do
+                    procedimento
+                  </li>
+                </ul>
+              </article>
+
+              <!-- GRANDES VASOS SANGUÍNEOS -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Grandes Vasos Sanguíneos</h3>
+                <p>
+                  Artérias e veias distribuem sangue, oxigênio, nutrientes e
+                  medicamentos por todo o corpo.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Administração de medicamentos intravenosos</li>
+                  <li>Controle da circulação sanguínea</li>
+                  <li>Reposição de líquidos e sangue quando necessário</li>
+                </ul>
+              </article>
+
+              <!-- AORTA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Aorta</h3>
+                <p>
+                  Maior artéria do organismo, responsável por distribuir o
+                  sangue oxigenado para todos os tecidos.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Monitorização da circulação sistêmica</li>
+                  <li>
+                    Controle da pressão arterial durante cirurgias de grande
+                    porte
+                  </li>
+                </ul>
+              </article>
+
+              <!-- ESÔFAGO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Esôfago</h3>
+                <p>Conduz os alimentos da boca até o estômago.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Avaliação do risco de broncoaspiração</li>
+                  <li>Definição do tempo adequado de jejum</li>
+                  <li>Cuidados especiais durante a indução anestésica</li>
+                </ul>
+              </article>
+
+              <!-- ESTÔMAGO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Estômago</h3>
+                <p>Responsável pela digestão inicial dos alimentos.</p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>
+                    Jejum pré-operatório reduz o risco de aspiração pulmonar
+                  </li>
+                  <li>
+                    Avaliação de pacientes com refluxo ou esvaziamento gástrico
+                    lento
+                  </li>
+                </ul>
+              </article>
+
+              <!-- FÍGADO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Fígado</h3>
+                <p>
+                  Participa do metabolismo, da produção de proteínas e da
+                  metabolização de diversos medicamentos.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Escolha adequada dos anestésicos</li>
+                  <li>Ajuste das doses em pacientes com doenças hepáticas</li>
+                  <li>
+                    Metabolização de diversos fármacos utilizados durante a
+                    cirurgia
+                  </li>
+                </ul>
+              </article>
+
+              <!-- RINS -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Rins</h3>
+                <p>
+                  Filtram o sangue, controlam líquidos e eletrólitos e eliminam
+                  substâncias do organismo.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Eliminação de medicamentos anestésicos</li>
+                  <li>Controle do equilíbrio hídrico</li>
+                  <li>
+                    Monitorização da função renal durante cirurgias prolongadas
+                  </li>
+                </ul>
+              </article>
+
+              <!-- COLUNA TORÁCICA E LOMBAR -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Coluna Torácica e Lombar</h3>
+                <p>
+                  Fornece sustentação ao tronco e protege a medula espinhal.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Local para realização de anestesia raquidiana</li>
+                  <li>Local para realização de anestesia peridural</li>
+                  <li>Referência anatômica para bloqueios neuraxiais</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <!--CONTEÚDO - BRAÇOS-->
+          <div class="regiao-conteudo" id="conteudo-bracos">
+            <!-- Introdução -->
+            <div class="conteudo-intro">
+              <span class="conteudo-tag">Região</span>
+              <h2>Braços e Anestesiologia</h2>
+              <p>
+                Os braços reúnem ossos, músculos, vasos e nervos responsáveis
+                pelos movimentos e pela sensibilidade dos membros superiores.
+                Na anestesiologia, são muito usados para acesso venoso,
+                monitorização e bloqueios regionais.
+              </p>
+            </div>
+
+            <!-- Cards das estruturas -->
+            <div class="orgaos-grid">
+              <!-- PLEXO BRAQUIAL -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Plexo Braquial</h3>
+                <p>
+                  Conjunto de nervos que sai da medula e inerva o ombro, o
+                  braço, o antebraço e a mão.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Local de bloqueios para cirurgias do membro superior</li>
+                  <li>Permite anestesia sem necessidade de anestesia geral</li>
+                  <li>Exige conhecimento anatômico para evitar lesões</li>
+                </ul>
+              </article>
+
+              <!-- VEIAS DO BRAÇO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Veias do Braço</h3>
+                <p>
+                  Veias superficiais, como a cefálica e a basílica, ficam
+                  próximas à pele e são fáceis de acessar.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Acesso venoso para medicamentos e líquidos</li>
+                  <li>Administração dos anestésicos intravenosos</li>
+                  <li>Coleta de sangue durante o procedimento</li>
+                </ul>
+              </article>
+
+              <!-- ARTÉRIA RADIAL -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Artéria Radial</h3>
+                <p>
+                  Artéria localizada no punho, onde o pulso pode ser sentido
+                  com facilidade.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Monitorização da pressão arterial invasiva</li>
+                  <li>Coleta de gasometria arterial</li>
+                  <li>Avaliação da circulação da mão</li>
+                </ul>
+              </article>
+
+              <!-- OSSOS E ARTICULAÇÕES -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Ossos e Articulações</h3>
+                <p>
+                  Úmero, rádio e ulna formam o esqueleto do braço, ligados
+                  pelas articulações do ombro, cotovelo e punho.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Posicionamento correto do braço na mesa cirúrgica</li>
+                  <li>Prevenção de lesões de nervos por compressão</li>
+                  <li>Planejamento anestésico em cirurgias ortopédicas</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <!--CONTEÚDO - PERNAS-->
+          <div class="regiao-conteudo" id="conteudo-pernas">
+            <!-- Introdução -->
+            <div class="conteudo-intro">
+              <span class="conteudo-tag">Região</span>
+              <h2>Pernas e Anestesiologia</h2>
+              <p>
+                As pernas sustentam o corpo e permitem a locomoção. Na
+                anestesiologia, é uma região importante para bloqueios
+                regionais, acessos vasculares e prevenção de complicações
+                circulatórias.
+              </p>
+            </div>
+
+            <!-- Cards das estruturas -->
+            <div class="orgaos-grid">
+              <!-- NERVO CIÁTICO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Nervo Ciático</h3>
+                <p>
+                  Maior nervo do corpo, percorre a parte de trás da coxa e
+                  inerva grande parte da perna.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Bloqueio para cirurgias de perna, tornozelo e pé</li>
+                  <li>Analgesia após cirurgias ortopédicas</li>
+                  <li>Reduz o uso de anestesia geral</li>
+                </ul>
+              </article>
+
+              <!-- NERVO FEMORAL -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Nervo Femoral</h3>
+                <p>
+                  Inerva a parte da frente da coxa e participa dos movimentos
+                  de extensão do joelho.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Bloqueio femoral para cirurgias de coxa e joelho</li>
+                  <li>Controle da dor após cirurgias do joelho</li>
+                </ul>
+              </article>
+
+              <!-- VASOS SANGUÍNEOS DA PERNA -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Vasos Sanguíneos</h3>
+                <p>
+                  A artéria e a veia femorais levam e trazem sangue dos
+                  membros inferiores.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Acesso venoso central em situações específicas</li>
+                  <li>Avaliação da circulação do membro</li>
+                  <li>Prevenção de trombose durante cirurgias longas</li>
+                </ul>
+              </article>
+
+              <!-- JOELHO -->
+              <article class="orgao-card">
+                <h3 class="orgao-titulo">Joelho</h3>
+                <p>
+                  Articulação que une a coxa à perna e suporta grande parte
+                  do peso do corpo.
+                </p>
+                <span class="orgao-label">Importância na anestesiologia</span>
+                <ul class="orgao-lista">
+                  <li>Cirurgias comuns que usam raquianestesia ou bloqueios</li>
+                  <li>Posicionamento cuidadoso para evitar lesões</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

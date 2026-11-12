@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ResideOn | Questionários</title>
+
+    <!--Combino os dois para reaproveitar-->
+    <link rel="stylesheet" href="../css/casos-clinicos.css" />
+    <link rel="stylesheet" href="../css/questionarios.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- MENU LATERAL -->
+      <aside class="sidebar">
+        <a href="inicio.html" class="logo"> Reside<span>On</span> </a>
+
+        <nav class="menu-lateral">
+          <a href="primeirocard.html"><span>⌂</span> Visão geral</a>
+          <a href="mapa-corpo.html"><span>✚</span> Mapa anatômico</a>
+          <a href="biblioteca-anestegiologia.html"><span>▤</span> Biblioteca</a>
+          <a href="casos-clinicos.html"><span>▣</span> Casos clínicos</a>
+          <a href="questionarios.html" class="ativo"
+            ><span>◷</span> Questionários</a
+          >
+        </nav>
+
+        <div class="sidebar-final">
+          <a href="inicio.html">↪ Sair</a>
+        </div>
+      </aside>
+
+      <!-- ÁREA PRINCIPAL -->
+      <main class="principal">
+        <!--Organização do conteúdo-->
+        <section class="conteudo">
+            <!--Cabeçalho da página-->
+          <div class="cabecalho">
+            <h1>Questionários</h1>
+            <p>
+              Teste seus conhecimentos e receba o feedback de cada resposta.
+            </p>
+          </div>
+
+          <h2 class="titulo-secao">Questionário 1 – Anestesia na prática</h2>
+
+          <div class="lista-questoes">
+            <!-- QUESTÃO 1 -->
+            <div class="caso questao">
+              <p class="rotulo">QUESTÃO 1</p>
+              <p class="pergunta">
+                Durante uma cirurgia, logo após a indução com sevoflurano e
+                succinilcolina, o paciente apresenta rigidez de masseter,
+                taquicardia, aumento rápido do CO2 expirado e temperatura em
+                elevação. Qual é o medicamento específico para esse quadro?
+              </p>
+              <!--múltipla escolha – Radio-->
+              <!--O input faz a entrada de dados. O type=radio cria um botão de seleção 
+              circular. Name identifica um grupo de opções, O id identificar aquele elemento
+              específico-->
+              <input type="radio" name="q1" id="q1a" class="errada" />
+              <!--O label esta criando o rótulo associado a um campo-->
+              <label for="q1a" class="opcao">A) Neostigmina</label>
+
+              <input type="radio" name="q1" id="q1b" class="certa" />
+              <label for="q1b" class="opcao">B) Dantroleno</label>
+
+              <input type="radio" name="q1" id="q1c" class="errada" />
+              <label for="q1c" class="opcao">C) Atropina</label>
+
+              <input type="radio" name="q1" id="q1d" class="errada" />
+              <label for="q1d" class="opcao">D) Propofol</label>
+
+              <p class="feedback acerto">✔ Resposta correta!</p>
+              <p class="feedback erro">
+                ✖ Resposta incorreta. A correta é a B) Dantroleno.
+              </p>
+
+              <p class="explicacao">
+                O quadro sugere hipertermia maligna. O dantroleno reduz a
+                liberação de cálcio no retículo sarcoplasmático da musculatura.
+                Junto dele, é preciso suspender o halogenado e a succinilcolina
+                e ventilar com oxigênio a 100%.
+              </p>
+            </div>
+
+            <!-- QUESTÃO 2 -->
+            <div class="caso questao">
+              <p class="rotulo">QUESTÃO 2</p>
+              <p class="pergunta">
+                Minutos após um bloqueio de plexo braquial, o paciente refere
+                gosto metálico e formigamento na boca, evolui com convulsão e
+                depois com arritmia grave. Qual é a terapia específica para essa
+                complicação?
+              </p>
+
+              <input type="radio" name="q2" id="q2a" class="certa" />
+              <label for="q2a" class="opcao">A) Emulsão lipídica a 20%</label>
+
+              <input type="radio" name="q2" id="q2b" class="errada" />
+              <label for="q2b" class="opcao">B) Gluconato de cálcio</label>
+
+              <input type="radio" name="q2" id="q2c" class="errada" />
+              <label for="q2c" class="opcao">C) Flumazenil</label>
+
+              <input type="radio" name="q2" id="q2d" class="errada" />
+              <label for="q2d" class="opcao">D) Naloxona</label>
+
+              <p class="feedback acerto">✔ Resposta correta!</p>
+              <p class="feedback erro">
+                ✖ Resposta incorreta. A correta é a A) Emulsão lipídica a 20%.
+              </p>
+
+              <p class="explicacao">
+                O quadro é de toxicidade sistêmica por anestésico local. Além de
+                controlar a via aérea e tratar a convulsão, a emulsão lipídica é
+                o tratamento específico. Na parada cardíaca, a adrenalina deve
+                ser usada em doses reduzidas.
+              </p>
+            </div>
+
+            <!-- QUESTÃO 3 -->
+            <div class="caso questao">
+              <p class="rotulo">QUESTÃO 3</p>
+              <p class="pergunta">
+                Uma paciente adulta e saudável tem cirurgia eletiva marcada para
+                as 14h. Ela pergunta se pode tomar água e café sem leite pela
+                manhã. Segundo as diretrizes da ASA, qual é o jejum mínimo para
+                líquidos claros?
+              </p>
+
+              <input type="radio" name="q3" id="q3a" class="errada" />
+              <label for="q3a" class="opcao">A) 8 horas</label>
+
+              <input type="radio" name="q3" id="q3b" class="errada" />
+              <label for="q3b" class="opcao">B) 6 horas</label>
+
+              <input type="radio" name="q3" id="q3c" class="certa" />
+              <label for="q3c" class="opcao">C) 2 horas</label>
+
+              <input type="radio" name="q3" id="q3d" class="errada" />
+              <label for="q3d" class="opcao">D) 4 horas</label>
+
+              <p class="feedback acerto">✔ Resposta correta!</p>
+              <p class="feedback erro">
+                ✖ Resposta incorreta. A correta é a C) 2 horas.
+              </p>
+
+              <p class="explicacao">
+                Para líquidos claros, o jejum mínimo é de 2 horas. Uma refeição
+                leve exige 6 horas, e uma refeição gordurosa ou com carne exige
+                8 horas ou mais. Jejum mais longo que o necessário aumenta
+                desconforto, sede e risco de hipoglicemia e desidratação.
+              </p>
+            </div>
+
+            <!-- QUESTÃO 4 -->
+            <div class="caso questao">
+              <p class="rotulo">QUESTÃO 4</p>
+              <p class="pergunta">
+                Um paciente de 72 anos, com insuficiência renal e hepática,
+                precisa de bloqueio neuromuscular para uma cirurgia longa. Qual
+                bloqueador é uma boa escolha por ter eliminação pouco dependente
+                desses órgãos?
+              </p>
+
+              <input type="radio" name="q4" id="q4a" class="errada" />
+              <label for="q4a" class="opcao">A) Pancurônio</label>
+
+              <input type="radio" name="q4" id="q4b" class="errada" />
+              <label for="q4b" class="opcao">B) Vecurônio</label>
+
+              <input type="radio" name="q4" id="q4c" class="errada" />
+              <label for="q4c" class="opcao"
+                >C) Rocurônio em doses repetidas</label
+              >
+
+              <input type="radio" name="q4" id="q4d" class="certa" />
+              <label for="q4d" class="opcao">D) Cisatracúrio</label>
+
+              <p class="feedback acerto">✔ Resposta correta!</p>
+              <p class="feedback erro">
+                ✖ Resposta incorreta. A correta é a D) Cisatracúrio.
+              </p>
+
+              <p class="explicacao">
+                O cisatracúrio é eliminado principalmente pela degradação de
+                Hofmann, que acontece no plasma, sem depender de rim ou fígado.
+                Pancurônio, vecurônio e rocurônio dependem mais desses órgãos e
+                podem ter efeito prolongado nesse paciente.
+              </p>
+            </div>
+
+            <!-- QUESTÃO 5 -->
+            <div class="caso questao">
+              <p class="rotulo">QUESTÃO 5</p>
+              <p class="pergunta">
+                Uma paciente de 30 anos fez raquianestesia há 3 dias. Ela está
+                com dor de cabeça forte que piora ao ficar em pé e melhora
+                deitada, sem melhora após repouso, hidratação, cafeína e
+                analgésicos. Qual é a conduta indicada?
+              </p>
+
+              <input type="radio" name="q5" id="q5a" class="certa" />
+              <label for="q5a" class="opcao"
+                >A) Tampão sanguíneo epidural</label
+              >
+
+              <input type="radio" name="q5" id="q5b" class="errada" />
+              <label for="q5b" class="opcao">B) Nova raquianestesia</label>
+
+              <input type="radio" name="q5" id="q5c" class="errada" />
+              <label for="q5c" class="opcao">C) Antibiótico endovenoso</label>
+
+              <input type="radio" name="q5" id="q5d" class="errada" />
+              <label for="q5d" class="opcao"
+                >D) Manter a conduta e dar alta sem orientações</label
+              >
+
+              <p class="feedback acerto">✔ Resposta correta!</p>
+              <p class="feedback erro">
+                ✖ Resposta incorreta. A correta é a A) Tampão sanguíneo
+                epidural.
+              </p>
+
+              <p class="explicacao">
+                É uma cefaleia pós-punção dural, caracterizada pela piora ao
+                ficar em pé. O tratamento começa com medidas conservadoras.
+                Quando elas falham, o tampão sanguíneo epidural é o tratamento
+                mais eficaz.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

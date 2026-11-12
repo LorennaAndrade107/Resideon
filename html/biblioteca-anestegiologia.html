@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ResideOn | Biblioteca</title>
+
+    <link rel="stylesheet" href="../css/primeirocard.css" />
+    <link rel="stylesheet" href="../css/biblioteca-anestegiologia.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- MENU LATERAL -->
+      <aside class="sidebar">
+        <a href="inicio.html" class="logo">Reside<span>On</span></a>
+
+        <nav class="menu-lateral">
+          <a href="primeirocard.html"><span>⌂</span> Visão geral</a>
+          <a href="mapa-corpo.html"><span>✚</span> Mapa anatômico</a>
+          <!--A classe "ativo" Identifica que a opção Biblioteca corresponde a pagina
+          que esta averta naquele momento-->
+          <a href="biblioteca-anestegiologia.html" class="ativo"
+            ><span>▤</span> Biblioteca</a
+          >
+          <a href="casos-clinicos.html"><span>▣</span> Casos clínicos</a>
+          <a href="questionarios.html"><span>◷</span> Questionários</a>
+        </nav>
+
+        <div class="sidebar-final">
+          <a href="inicio.html">↪ Sair</a>
+        </div>
+      </aside>
+
+      <!-- ÁREA PRINCIPAL -->
+      <main class="principal">
+        <section class="conteudo">
+          <div class="cabecalho">
+            <h1>Biblioteca de Anestesiologia</h1>
+            <p>Livros, periódicos e diretrizes para estudar e se atualizar.</p>
+          </div>
+
+          <!-- Seção de livros - textos gerais -->
+          <!--agrupa uma seção inteira da biblioteca.-->
+          <div class="bib-secao">
+            <!--Agrupa o título que aparece no início dessa seção-->
+            <div class="bib-secao-topo">
+              <h2>Livros-texto gerais</h2>
+            </div>
+
+            <!--agrupa os cartões dos livros.-->
+            <div class="bib-grid">
+              <!-- MILLER -->
+              <!--O article é meu conteúdo independente-->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <!-- Imagem da capa -->
+                  <img
+                    src="../img/OIP (4).webp"
+                    alt="Capa de Miller's Anesthesia"
+                  />
+                </div>
+
+                <!--agrupa as informações textuais do cartão-->
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Miller's Anesthesia (Gropper et al.)
+                  </h3>
+                  <span class="livro-destaque"
+                    >A principal referência mundial</span
+                  >
+                  <p class="livro-desc">
+                    Ideal para consulta aprofundada e preparação para provas.
+                  </p>
+                  <span class="livro-label">Aborda</span>
+                  <ul class="livro-topicos">
+                    <li>Toda a anestesiologia</li>
+                    <li>Farmacologia dos anestésicos</li>
+                    <li>Fisiologia</li>
+                    <li>Manejo das vias aéreas</li>
+                    <li>Monitorização</li>
+                    <li>Terapia intensiva</li>
+                    <li>Anestesia em todas as especialidades</li>
+                  </ul>
+
+                  <!-- cria a estrutura de uma avaliação visual de relevância -->
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- BARASH -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/barash-cullen-and-stoelting-s-clinical-anesthesia-print-ebook-with-multimedia-ninth-edition.jpg"
+                    alt="Capa de Barash, Cullen & Stoelting's Clinical Anesthesia"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Barash, Cullen &amp; Stoelting's Clinical Anesthesia
+                  </h3>
+                  <span class="livro-destaque">Excelente para residência</span>
+                  <p class="livro-desc">
+                    Considerado por muitos o livro mais didático.
+                  </p>
+                  <span class="livro-label">Aborda</span>
+                  <ul class="livro-topicos">
+                    <li>Avaliação pré-operatória</li>
+                    <li>Anestesia geral</li>
+                    <li>Anestesia regional</li>
+                    <li>Dor</li>
+                    <li>Emergências</li>
+                    <li>Anestesia pediátrica</li>
+                    <li>Obstétrica</li>
+                    <li>Cardíaca</li>
+                    <li>Neuroanestesia</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- MORGAN & MIKHAIL -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (5).webp"
+                    alt="Capa de Morgan & Mikhail's Clinical Anesthesiology"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Morgan &amp; Mikhail's Clinical Anesthesiology
+                  </h3>
+                  <span class="livro-destaque">Melhor livro para iniciar</span>
+                  <p class="livro-desc">
+                    Muito utilizado pelos residentes no primeiro ano. Possui
+                    linguagem simples e direta.
+                  </p>
+                  <span class="livro-label">Excelente para aprender</span>
+                  <ul class="livro-topicos">
+                    <li>Farmacologia</li>
+                    <li>Fisiologia</li>
+                    <li>Equipamentos</li>
+                    <li>Ventilação</li>
+                    <li>Anestesia básica</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- TRATADO SAESP -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (6).webp"
+                    alt="Capa do Tratado de Anestesiologia SAESP"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Tratado de Anestesiologia SAESP</h3>
+                  <span class="livro-destaque"
+                    >Principal referência brasileira</span
+                  >
+                  <p class="livro-desc">É bibliografia oficial da SBA.</p>
+                  <span class="livro-label">Aborda</span>
+                  <ul class="livro-topicos">
+                    <li>Rotina no Brasil</li>
+                    <li>Protocolos nacionais</li>
+                    <li>Legislação</li>
+                    <li>Técnicas utilizadas na prática clínica</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- LONGNECKER -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/51-6CMTV2tL.jpg"
+                    alt="Capa de Longnecker – Anesthesiology"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Longnecker – Anesthesiology</h3>
+                  <span class="livro-destaque"
+                    >Excelente para aprofundamento</span
+                  >
+                  <p class="livro-desc">
+                    Possui muitos casos clínicos e discussão baseada em
+                    evidências.
+                  </p>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-4"></div>
+                    </div>
+                    <span class="rel-valor">4/5</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- FARMACOLOGIA -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Farmacologia</h2>
+            </div>
+
+            <div class="bib-grid">
+              <!-- STOELTING -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/71RzjgcJv-L._SL1500_.jpg"
+                    alt="Capa de Stoelting's Pharmacology & Physiology in Anesthetic Practice"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    <!--&amp - Ela representa o caractere &-->
+                    Stoelting's Pharmacology &amp; Physiology in Anesthetic
+                    Practice
+                  </h3>
+                  <p class="livro-desc">O melhor livro para compreender:</p>
+                  <ul class="livro-topicos">
+                    <li>Propofol</li>
+                    <li>Sevoflurano</li>
+                    <li>Isoflurano</li>
+                    <li>Opioides</li>
+                    <li>Bloqueadores neuromusculares</li>
+                    <li>Vasopressores</li>
+                    <li>Farmacocinética</li>
+                    <li>Farmacodinâmica</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- GOODMAN & GILMAN -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/Goodman & Gilman's The Pharmacological Basis of Therapeutics, 12th Edition.jpg"
+                    alt="Capa de Goodman & Gilman"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Goodman &amp; Gilman</h3>
+                  <span class="livro-destaque"
+                    >Referência mundial em farmacologia</span
+                  >
+                  <p class="livro-desc">Muito utilizado para entender:</p>
+                  <ul class="livro-topicos">
+                    <li>Receptores</li>
+                    <li>Anestésicos</li>
+                    <li>Analgésicos</li>
+                    <li>Drogas cardiovasculares</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-4"></div>
+                    </div>
+                    <span class="rel-valor">4/5</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- FISIOLOGIA -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Fisiologia</h2>
+            </div>
+
+            <div class="bib-grid">
+              <!-- GUYTON & HALL -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/61r8Hylc3gS._SL1095_.jpg"
+                    alt="Capa de Guyton & Hall – Tratado de Fisiologia Médica"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Guyton &amp; Hall – Tratado de Fisiologia Médica
+                  </h3>
+                  <span class="livro-destaque">Praticamente obrigatório</span>
+                  <p class="livro-desc">Importante para:</p>
+                  <ul class="livro-topicos">
+                    <li>Sistema cardiovascular</li>
+                    <li>Respiração</li>
+                    <li>Rim</li>
+                    <li>Sistema nervoso</li>
+                    <li>Equilíbrio ácido-base</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ANESTESIA REGIONAL -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Anestesia regional</h2>
+            </div>
+
+            <div class="bib-grid">
+              <!-- HADZIC: TEXTBOOK -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/9781260142709.jpg"
+                    alt="Capa de Hadzic's Textbook of Regional Anesthesia"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Hadzic's Textbook of Regional Anesthesia
+                  </h3>
+                  <span class="livro-destaque"
+                    >O livro mais famoso sobre bloqueios</span
+                  >
+                  <span class="livro-label">Contém</span>
+                  <ul class="livro-topicos">
+                    <li>Anatomia</li>
+                    <li>Ultrassom</li>
+                    <li>Técnicas</li>
+                    <li>Complicações</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- HADZIC: PERIPHERAL NERVE BLOCKS -->
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/61MbghLtptL._SL1000_.jpg"
+                    alt="Capa de Hadzic's Peripheral Nerve Blocks"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Hadzic's Peripheral Nerve Blocks</h3>
+                  <p class="livro-desc">Focado exclusivamente em:</p>
+                  <ul class="livro-topicos">
+                    <li>Plexo braquial</li>
+                    <li>Femoral</li>
+                    <li>Ciático</li>
+                    <li>Bloqueios guiados por ultrassom</li>
+                  </ul>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-4"></div>
+                    </div>
+                    <span class="rel-valor">4/5</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ARTIGOS E PERIÓDICOS -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Artigos e periódicos científicos</h2>
+              <p>
+                Para acompanhar as evidências mais recentes, estes são os
+                periódicos mais respeitados da especialidade. Eles publicam
+                pesquisas sobre novas técnicas anestésicas, manejo das vias
+                aéreas, farmacologia, segurança do paciente e medicina
+                perioperatória.
+              </p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (7).webp"
+                    alt="Anesthesiology"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Anesthesiology</h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <p class="livro-desc">
+                    American Society of Anesthesiologists
+                  </p>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (8).webp"
+                    alt="Anesthesia & Analgesia"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Anesthesia &amp; Analgesia</h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (9).webp"
+                    alt="Anaesthesia"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">Anaesthesia</h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-4"></div>
+                    </div>
+                    <span class="rel-valor">4/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (10).webp"
+                    alt="British Journal of Anaesthesia"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    British Journal of Anaesthesia (BJA)
+                  </h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-5"></div>
+                    </div>
+                    <span class="rel-valor">5/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (11).webp"
+                    alt="European Journal of Anaesthesiology"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    European Journal of Anaesthesiology (EJA)
+                  </h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-4"></div>
+                    </div>
+                    <span class="rel-valor">4/5</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="livro-card">
+                <div class="livro-capa">
+                  <span class="capa-vazia">▤</span>
+                  <img
+                    src="../img/OIP (12).webp"
+                    alt="Best Practice & Research Clinical Anaesthesiology"
+                  />
+                </div>
+                <div class="livro-corpo">
+                  <h3 class="livro-titulo">
+                    Best Practice &amp; Research Clinical Anaesthesiology
+                  </h3>
+                  <span class="livro-destaque">Periódico científico</span>
+                  <div class="relevancia">
+                    <span class="rel-rotulo">Relevância</span>
+                    <div class="rel-barra">
+                      <div class="rel-preenchimento nivel-3"></div>
+                    </div>
+                    <span class="rel-valor">3/5</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- DIRETRIZES -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Diretrizes importantes</h2>
+              <p>Leia também as recomendações oficiais de:</p>
+            </div>
+
+            <!--o cartão inteiro é um link-->
+            <div class="bib-grid">
+              <!--Faz o link abrir em uma nova aba do navegador.-->
+              <a
+                class="diretriz-card"
+                href="https://www.sbahq.org/busca-de-documentos/"
+                target="_blank"
+              >
+                <div>
+                  <h3 class="livro-titulo">
+                    Sociedade Brasileira de Anestesiologia (SBA)
+                  </h3>
+                  <span class="diretriz-site">sbahq.org</span>
+                </div>
+                <span class="diretriz-link">Acessar →</span>
+              </a>
+
+              <a
+                class="diretriz-card"
+                href="https://www.asahq.org"
+                target="_blank"
+              >
+                <div>
+                  <h3 class="livro-titulo">
+                    American Society of Anesthesiologists (ASA)
+                  </h3>
+                  <span class="diretriz-site">asahq.org</span>
+                </div>
+                <span class="diretriz-link">Acessar →</span>
+              </a>
+
+              <a class="diretriz-card" href="https://esaic.org" target="_blank">
+                <div>
+                  <h3 class="livro-titulo">
+                    European Society of Anaesthesiology and Intensive Care
+                    (ESAIC)
+                  </h3>
+                  <span class="diretriz-site">esaic.org</span>
+                </div>
+                <span class="diretriz-link">Acessar →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ORDEM DE ESTUDO -->
+          <div class="bib-secao">
+            <div class="bib-secao-topo">
+              <h2>Ordem de estudo recomendada</h2>
+              <p>
+                Se você está começando agora, uma sequência bastante eficiente
+                é:
+              </p>
+            </div>
+
+            <!--agrupar a tabela-->
+            <div class="tabela-wrap">
+              <!--estilos específicos para essa tabela-->
+              <table class="tabela-ordem">
+                <thead>
+                  <tr>
+                    <th>Ordem</th>
+                    <th>Livro</th>
+                    <th>Objetivo</th>
+                  </tr>
+                </thead>
+
+                <!--Corpo da tabela-->
+                <tbody>
+                  <tr>
+                    <td><span class="ordem-num">1</span></td>
+                    <td class="ordem-livro">Morgan &amp; Mikhail</td>
+                    <td>Base da especialidade</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">2</span></td>
+                    <td class="ordem-livro">Guyton &amp; Hall</td>
+                    <td>Fisiologia</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">3</span></td>
+                    <td class="ordem-livro">Stoelting</td>
+                    <td>Farmacologia</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">4</span></td>
+                    <td class="ordem-livro">Barash</td>
+                    <td>Aprofundamento clínico</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">5</span></td>
+                    <td class="ordem-livro">Miller</td>
+                    <td>Referência avançada</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">6</span></td>
+                    <td class="ordem-livro">Hadzic</td>
+                    <td>Anestesia regional</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ordem-num">7</span></td>
+                    <td class="ordem-livro">Tratado de Anestesiologia SAESP</td>
+                    <td>Prática e protocolos brasileiros</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="corpo-voltar">
+            <a href="primeirocard.html">← Voltar para Áreas de aprendizagem</a>
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

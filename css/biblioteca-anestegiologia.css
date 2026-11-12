@@ -1,0 +1,343 @@
+
+.bib-secao {
+    margin-top: 34px;
+}
+
+.bib-secao-topo {
+    margin-bottom: 16px;
+}
+
+/*titulo da seção*/
+/*Estou usando display flex pq criei uma barra verde
+do lado do títlo usandi ::before ai o flexbox vai ajudar
+a centralizar*/
+.bib-secao-topo h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    color: #12352B;
+}
+
+/* barrinha verde ao lado do título */
+/*elemento visual antes do conteúdo do título*/
+.bib-secao-topo h2::before {
+    /*ele não terá texto*/
+    content: "";
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+    background: #45C99A;
+}
+
+/*Descrição da seção*/
+.bib-secao-topo p {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #78877F;
+}
+
+/* 2 cards por linha */
+.bib-grid {
+    /*grade*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    /*início da linha*/
+    align-items: start;
+}
+
+/*Card de livro*/
+.livro-card {
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E4;
+    border-radius: 12px;
+}
+
+/*Corpo do card*/
+.livro-corpo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Capa do livro*/
+.livro-capa {
+    position: relative;
+    width: 100px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #1B493A, #0B1F1A);
+}
+
+/* ícone que aparece enquanto não existir imagem */
+.capa-vazia {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    color: #45C99A;
+}
+
+/*imagem da capa*/
+.livro-capa img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*Textos*/
+/*Título*/
+.livro-titulo {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #12352B;
+}
+
+/* etiqueta verde */
+.livro-destaque {
+    /*ocupar somente o espaço necessário, ficando alinhada à esquerda*/
+    align-self: flex-start;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #DDF3E9;
+    color: #167653;
+    font-size: 9.5px;
+    font-weight: 700;
+}
+
+/*Descrição*/
+.livro-desc {
+    margin-bottom: 12px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: #5B6B63;
+}
+
+/* rótulo pequeno em maiúsculas */
+.livro-label {
+    margin-bottom: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #279B75;
+}
+
+/* tópicos em forma de etiquetas */
+.livro-topicos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+/*itens individuais*/
+.livro-topicos li {
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #F0F4F2;
+    color: #3F4F47;
+    font-size: 10.5px;
+}
+
+/*controla a barra de relevância*/
+.relevancia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed #DCE4DF;
+}
+
+/*Rótulo da barra*/
+.rel-rotulo {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #78877F;
+}
+
+/*Fundo da barra*/
+.rel-barra {
+    flex: 1;
+    height: 8px;
+    border-radius: 20px;
+    background: #E7ECE9;
+    overflow: hidden;
+}
+
+/*preenchido*/
+.rel-preenchimento {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #279B75, #45C99A);
+}
+
+/* largura da barra conforme o nível (0 a 5) */
+/*lembra que o width é a largura*/
+.nivel-0 { width: 0; }
+.nivel-1 { width: 20%; }
+.nivel-2 { width: 40%; }
+.nivel-3 { width: 60%; }
+.nivel-4 { width: 80%; }
+.nivel-5 { width: 100%; }
+
+/*Valor numérico*/
+.rel-valor {
+    min-width: 28px;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 700;
+    color: #167653;
+}
+
+/*Cards de diretrizes*/
+.diretriz-card {
+    display: flex;
+    align-items: center;
+    /*coloca um espaço entre os elementos pelas extremidades*/
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E4;
+    border-radius: 12px;
+}
+
+/*Título dentro do card*/
+/*Elemento que tnha a classe .livro-titulo e que esteja dentro da 
+classe .diretriz-card*/
+.diretriz-card .livro-titulo {
+    margin-bottom: 6px;
+}
+
+/*Nome do site*/
+.diretriz-site {
+    font-size: 10.5px;
+    color: #839087;
+}
+
+/*Link da diretriz*/
+.diretriz-link {
+    /*mpede que o link diminua quando faltar espaço*/
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: 1px solid #279B75;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #279B75;
+}
+
+/*Tabela de ordem de estudo*/
+/*Área externa*/
+.tabela-wrap {
+    /*permite a rolagem horizontamente quando ultraapassar*/
+    overflow-x: auto;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E4;
+    border-radius: 12px;
+}
+
+/*Tabela*/
+.tabela-ordem {
+    width: 100%;
+    min-width: 520px;
+    /*junta as bordas das células evitando espaços entre elas*/
+    border-collapse: collapse;
+}
+
+/*Cabeçalho da tabela*/
+.tabela-ordem th {
+    padding: 14px 20px;
+    background: #0B1F1A;
+    color: #C0D8CC;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/*Células da tabela*/
+.tabela-ordem td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E1E8E4;
+    font-size: 12px;
+    color: #5B6B63;
+}
+
+/* bolinha com o número na tabela de ordem de estudo */
+.ordem-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #DDF3E9;
+    color: #167653;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/*elementos que possuem a classe
+.ordem-livro dentro da tabela .tabela-ordem*/
+.tabela-ordem .ordem-livro {
+    font-weight: 600;
+    color: #12352B;
+}
+
+/*Link para voltar*/
+.corpo-voltar {
+    margin-top: 28px;
+}
+
+/*Estou selecionando os links com a tag a dentro
+de .corpo-voltar*/
+.corpo-voltar a {
+    color: #279B75;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*responsividade*/
+@media (max-width: 700px) {
+    .bib-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .livro-card {
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .livro-capa {
+        width: 80px;
+        height: 115px;
+    }
+
+    .diretriz-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

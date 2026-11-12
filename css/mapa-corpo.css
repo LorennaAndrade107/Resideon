@@ -1,0 +1,319 @@
+/*Estou tirando os radios  do fluxo normal e deixando eles totalmente
+transparentes e tirei as interações do ponteiro*/
+.regiao-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*Transformei em grades. Coloquei a quantidade e distribui as colunas
+da grade*/
+.corpo-botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 12px;
+    margin-top: 5px;
+    background: #0B1F1A;
+    border: 1px solid #1B493A;
+    border-radius: 16px;
+}
+
+
+/* CADA CARD - regiões do corpo (é um label ligado a um rádio) */
+.regiao-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 150px;
+    /* sem padding à direita: a imagem encosta na borda do card */
+    padding: 0 0 0 16px;
+    overflow: hidden;
+    background: #11231E;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-family: inherit;
+    text-align: left;
+    color: #EAF5EF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.regiao-btn:hover {
+    border-color: #1B493A;
+}
+
+.regiao-nome {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* PAINEL DA IMAGEM (colado na direita do card) */
+/*usei o fle-shrink para não diminuir o tamanho caso o espaço não caiba*/
+.regiao-imagem {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    /* cor de apoio, caso a imagem demore a carregar */
+    background: #E4E7E6;
+    overflow: hidden;
+}
+
+.regiao-imagem img {
+    width: 100%;
+    height: 100%;
+    /* cover = a imagem preenche tudo, sem bordas sobrando */
+    object-fit: cover;
+    /*Controla qual parte da imagem será priorizada quando ocorrer um corte*/
+    object-position: center;
+    display: block;
+    /* imagem levemente escurecida quando o card não está selecionado */
+    /*o brightness controla o brilho*/
+    filter: brightness(0.85);
+    transition: 0.3s;
+}
+
+/*Quando o mouse estiver sobre o card, selecione a 
+imagem que está dentro dele. O filter none remove os filtros aplicados
+a imagem. */
+.regiao-btn:hover .regiao-imagem img {
+    filter: none;
+}
+
+/* todos os conteúdos começam escondidos */
+/*O aparecer vou criar o keyframe*/
+.regiao-conteudo {
+    display: none;
+    margin-top: 22px;
+    animation: aparecer 0.4s ease;
+}
+
+/* mostra só o conteúdo da região marcada - pseudo-classe (checked) */
+/*Com o simbolo # estou buscando pelo Id */
+/*O ~ serve para selecionar elementos que estão no mesmo nível de outro elemento
+desde que apareçam depois dele*/
+/*Todos esses vao receber a regra display block*/
+#r-cabeca:checked ~ #conteudo-cabeca,
+#r-tronco:checked ~ #conteudo-tronco,
+#r-bracos:checked ~ #conteudo-bracos,
+#r-pernas:checked ~ #conteudo-pernas {
+    display: block;
+}
+
+/* card da região marcada fica com a borda e o texto verdes */
+/*oq eu fiz: Selecione o elemento label cujo atributo for possui
+exatamente o valor r-cabeca*/
+/*Os colchetes [] me permitem selecionar os elementos com base em seus 
+atributos*/
+#r-cabeca:checked ~ .corpo-botoes label[for="r-cabeca"],
+#r-tronco:checked ~ .corpo-botoes label[for="r-tronco"],
+#r-bracos:checked ~ .corpo-botoes label[for="r-bracos"],
+#r-pernas:checked ~ .corpo-botoes label[for="r-pernas"] {
+    border-color: #45C99A;
+    color: #45C99A;
+}
+
+/* imagem do card marcado sem escurecer */
+/*tinha declardado lá anteriormente o brightness,
+com o none eu removo esse efeito*/
+#r-cabeca:checked ~ .corpo-botoes label[for="r-cabeca"] .regiao-imagem img,
+#r-tronco:checked ~ .corpo-botoes label[for="r-tronco"] .regiao-imagem img,
+#r-bracos:checked ~ .corpo-botoes label[for="r-bracos"] .regiao-imagem img,
+#r-pernas:checked ~ .corpo-botoes label[for="r-pernas"] .regiao-imagem img {
+    filter: none;
+}
+
+/* animação de entrada do conteúdo */
+@keyframes aparecer {
+    /*estado inicial*/
+    from {
+        /*começa transparente e com o transform consigo mudar 
+        a posição - mexendo na vertical*/
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    /*estado final*/
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.conteudo-intro {
+    position: relative;
+    padding: 28px 30px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E4;
+    border-left: 5px solid #45C99A;
+    border-radius: 12px;
+}
+
+.conteudo-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: #DDF3E9;
+    color: #167653;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.conteudo-intro h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    color: #12352B;
+    margin-bottom: 14px;
+}
+
+.conteudo-intro p {
+    font-size: 12.5px;
+    line-height: 1.85;
+    color: #5B6B63;
+}
+
+/* espaço abaixo de cada parágrafo */
+.conteudo-intro p {
+    margin-bottom: 12px;
+}
+
+/*Cards das estruturas anatomicas*/
+.orgaos-grid {
+    display: grid;
+    /*duas colunas de mesma proporção*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+    align-items: start;
+}
+
+/*Estilizando cada card*/
+.orgao-card {
+    padding: 20px 22px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E4;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.orgao-card:hover {
+    border-color: #45C99A;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(18, 53, 43, 0.08);
+}
+
+
+/* NOME DA ESTRUTURA */
+.orgao-titulo {
+    font-size: 15px;
+    color: #12352B;
+    margin-bottom: 10px;
+}
+
+
+/* DESCRIÇÃO */
+/*seleciona somente os parágrafos que são filhos diretos de .orgao-card*/
+.orgao-card > p {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #5B6B63;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px dashed #DCE4DF;
+}
+
+
+/* "IMPORTÂNCIA NA ANESTESIOLOGIA" */
+.orgao-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 9px;
+    font-weight: 700;
+    /*Aumenta o espaçamento entre as letras.*/
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #279B75;
+}
+
+/*Estilização da lista*/
+.orgao-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*Estilização de cada item da lista*/
+.orgao-lista li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: #3F4F47;
+}
+
+/* marcador verde de "check" */
+/*O before permite criar conteúdo visual antes do conteúdo
+de um elemento*/
+.orgao-lista li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #DDF3E9;
+    color: #167653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.conteudo-final {
+    margin-top: 18px;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1B493A 0%, #0B1F1A 100%);
+    color: #EAF5EF;
+}
+
+.conteudo-final h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 15px;
+    color: #45C99A;
+    margin-bottom: 14px;
+}
+
+.conteudo-final p {
+    font-size: 12.5px;
+    line-height: 1.85;
+    color: #C0D8CC;
+}
+
+/* espaço entre dois parágrafos seguidos */
+.conteudo-final p {
+    margin-bottom: 12px;
+}
+
+/*responsividade para celular*/
+@media (max-width: 700px) {
+
+    .corpo-botoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .orgaos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-intro,
+    .conteudo-final {
+        padding: 22px;
+    }
+}
